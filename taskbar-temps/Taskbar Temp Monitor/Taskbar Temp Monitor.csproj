@@ -80,7 +80,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\amdcpu.ico" />
+    <Content Include="Resources\cpu_iconblue1_256px.ico" />
+    <Content Include="Resources\cpu_icongreen1_256px.ico" />
+    <Content Include="Resources\cpu_iconorange1_256px.ico" />
+    <Content Include="Resources\cpu_iconpurple1_256px.ico" />
+    <Content Include="Resources\cpu_iconred1_256px.ico" />
+    <Content Include="Resources\cpu_iconyellow1_256px.ico" />
+    <Content Include="Resources\danger_icon.ico" />
     <Content Include="Resources\icon-template.ico" />
+    <Content Include="Resources\question.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\OpenHardwareMonitor.csproj">

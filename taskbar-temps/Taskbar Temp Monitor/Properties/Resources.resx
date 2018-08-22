@@ -118,7 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cpu_iconblue1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cpu_iconblue1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cpu_icongreen1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cpu_icongreen1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cpu_iconorange1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cpu_iconorange1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cpu_iconpurple1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cpu_iconpurple1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cpu_iconred1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cpu_iconred1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cpu_iconyellow1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cpu_iconyellow1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="danger_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\danger_icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_template" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icon-template.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\question.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
