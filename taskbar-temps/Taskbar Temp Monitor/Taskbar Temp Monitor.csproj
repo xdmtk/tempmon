@@ -82,5 +82,15 @@
   <ItemGroup>
     <Content Include="Resources\icon-template.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OpenHardwareMonitor.csproj">
+      <Project>{f5e0c1f7-9e9b-46f2-ac88-8c9c1c923880}</Project>
+      <Name>OpenHardwareMonitor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenHardwareMonitorLib.csproj">
+      <Project>{b0397530-545a-471d-bb74-027ae456df1a}</Project>
+      <Name>OpenHardwareMonitorLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

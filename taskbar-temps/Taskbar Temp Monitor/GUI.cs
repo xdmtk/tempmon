@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OpenHardwareMonitor.Hardware;
+using OpenHardwareMonitor.WMI;
+using OpenHardwareMonitor.Utilities;
 
 namespace Taskbar_Temp_Monitor
 {
@@ -15,12 +18,22 @@ namespace Taskbar_Temp_Monitor
         NotifyIcon notify;
         ContextMenu context;
         MenuItem menu;
+        Computer myComputer;
+        
+        protected override void SetVisibleCore(bool value)
+        {
+            if (!this.IsHandleCreated)
+            {
+                value = false;
+                CreateHandle();
+
+            }
+            base.SetVisibleCore(value);
+        }
 
         public GUI()
         {
             InitializeComponent();
-
-            // 
             this.components = new Container();
             this.context = new ContextMenu();
             this.menu = new MenuItem();
@@ -41,10 +54,23 @@ namespace Taskbar_Temp_Monitor
             notify.Visible = true;
 
             notify.DoubleClick += new EventHandler(this.notify_DoubleClick);
-
+            runMainLogicLoop();
 
 
         }
+
+
+        private void runMainLogicLoop()
+        {
+            myComputer = new Computer
+            {
+                CPUEnabled = true
+            };
+        
+            myComputer.Open();
+            
+        }
+
 
 
         private void menu_Click(object sender, EventArgs e)
@@ -61,6 +87,7 @@ namespace Taskbar_Temp_Monitor
             this.Activate();
             
         }
+
 
     }
 

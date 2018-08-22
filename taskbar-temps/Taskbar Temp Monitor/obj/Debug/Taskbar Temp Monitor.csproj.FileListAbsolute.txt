@@ -8,3 +8,12 @@ C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj
 C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.exe
 C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.pdb
 C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar_Temp_Monitor.GUI.resources
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\OpenHardwareMonitor.exe
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\OpenHardwareMonitorLib.dll
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\OxyPlot.dll
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\Aga.Controls.dll
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\OpenHardwareMonitor.pdb
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\OpenHardwareMonitor.exe.config
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\OpenHardwareMonitorLib.pdb
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.csproj.CopyComplete

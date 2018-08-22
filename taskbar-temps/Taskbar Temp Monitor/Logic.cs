@@ -12,6 +12,9 @@ namespace Taskbar_Temp_Monitor
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+
+
+
         static void Main()
         {
             Application.EnableVisualStyles();
