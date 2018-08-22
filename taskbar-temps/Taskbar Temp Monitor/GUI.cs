@@ -64,7 +64,9 @@ namespace Taskbar_Temp_Monitor
 
         NotifyIcon notify;
         ContextMenu context;
-        MenuItem menu;
+        MenuItem exitItem;
+        MenuItem aboutItem;
+        MenuItem showForm;
         Computer myComputer;
         Timer tempTicker;
         
@@ -82,37 +84,54 @@ namespace Taskbar_Temp_Monitor
         public GUI()
         {
             InitializeComponent();
+
+            // Initialize all controls for application
             this.components = new Container();
             this.context = new ContextMenu();
-            this.menu = new MenuItem();
+            this.exitItem = new MenuItem();
+            this.showForm = new MenuItem();
+            this.aboutItem = new MenuItem();
             this.tempTicker = new Timer();
-            tempTicker.Interval = 100;
-            tempTicker.Tick += new EventHandler(this.runMainLogicLoop);
-
-
-            this.context.MenuItems.AddRange(
-                        new MenuItem[] { this.menu });
-
-            this.menu.Index = 0;
-            this.menu.Text = "E&xit";
-            this.menu.Click += new EventHandler(this.menu_Click);
-
             this.notify = new NotifyIcon(this.components);
 
-            myComputer = new Computer
+            // OpenHardwareMonitor Object
+            this.myComputer = new Computer
             {
                 CPUEnabled = true
             };
+
+
+            // Set timer interval and tick function
+            tempTicker.Interval = 100;
+            tempTicker.Tick += new EventHandler(this.runMainLogicLoop);
+
+            // Add menu items to the contextMenu item (taskbar menu)
+            this.context.MenuItems.AddRange(
+                        new MenuItem[] { this.exitItem, this.showForm, this.aboutItem});
+
+
+
+            // Set up menu items in taskbar
+            this.exitItem.Index = 2;
+            this.exitItem.Text = "E&xit";
+            this.exitItem.Click += new EventHandler(this.menu_Click);
+
+            this.aboutItem.Index = 1;
+            this.aboutItem.Text = "A&bout";
+            this.aboutItem.Click += new EventHandler(this.about_Click);
+
+            this.showForm.Index = 0;
+            this.showForm.Text = "O&pen";
+            this.showForm.Click += new EventHandler(this.showForm_Click);
+
         
+
+
+            // Start timer, initialize OHM object, and make taskbar icon visible
             myComputer.Open();
-
-            notify.ContextMenu = this.context;
-            notify.Text = "Form 1 Example";
-            notify.Visible = true;
-
-            notify.DoubleClick += new EventHandler(this.notify_DoubleClick);
-
             tempTicker.Start();
+            notify.ContextMenu = this.context;
+            notify.Visible = true;
 
 
         }
@@ -120,16 +139,27 @@ namespace Taskbar_Temp_Monitor
 
         private void runMainLogicLoop(object sender, EventArgs e)
         {
-            float? ct = getCpuTemp();
+
+            // Every call to this function gets the current CPU temperature and
+            // updates the icon and tooltip text
+            string cpuName = "";
+            float? ct = getCpuTemp(ref cpuName);
             decimal ctint = Math.Floor((decimal)ct);
+
+            // Too cold.. show frost
             if (ctint < 30)
             {
                 notify.Icon = Properties.Resources.frost;
             }
+            // Too hot.. show fire
             else if (ctint > 70)
             {
                 notify.Icon = Properties.Resources.fire;
             }
+
+            // Otherwise search through the array of number icons
+            // in resources to update the current icon with the corresponding
+            // temperature icon
             else
             {
                 for (int i = 30; i <= 70; ++i)
@@ -140,13 +170,18 @@ namespace Taskbar_Temp_Monitor
                     }
                 }
             }
-            notify.Text = ctint.ToString();
+
+
+            notify.Text = cpuName + ": " + ctint.ToString() + "C";
+            
 
 
 
 
-        }
-        private float? getCpuTemp()
+         }
+        
+
+        private float? getCpuTemp(ref string cpuName)
         {
            float? cpuTemp;
            foreach (var hardware in myComputer.Hardware)
@@ -154,6 +189,7 @@ namespace Taskbar_Temp_Monitor
                 hardware.Update();
                 if (hardware.HardwareType == HardwareType.CPU)
                 {
+                    cpuName = hardware.Name.ToString(); 
                     foreach (var sensor in hardware.Sensors)
                     {
                        if (sensor.SensorType == SensorType.Temperature)
@@ -176,22 +212,24 @@ namespace Taskbar_Temp_Monitor
             return null;
         }
 
+        private void showForm_Click(object sender, EventArgs e)
+        {
+            if (this.Visible == false)
+            {
+                this.Show();
+            }
+        }
+    
 
-
+        private void about_Click(object sender, EventArgs e)
+        {
+            // Add about form code here
+        }
         private void menu_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void notify_DoubleClick(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-            this.Activate();
-            
-        }
 
 
     }
