@@ -142,6 +142,7 @@
     <Content Include="Resources\79.ico" />
     <Content Include="Resources\fire.ico" />
     <Content Include="Resources\frost.ico" />
+    <Content Include="Resources\mainformbg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

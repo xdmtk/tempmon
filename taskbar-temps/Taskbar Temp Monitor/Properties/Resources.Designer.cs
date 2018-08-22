@@ -579,5 +579,15 @@ namespace Taskbar_Temp_Monitor.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap mainformbg {
+            get {
+                object obj = ResourceManager.GetObject("mainformbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

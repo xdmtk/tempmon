@@ -35,10 +35,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 74);
+            this.BackgroundImage = global::Taskbar_Temp_Monitor.Properties.Resources.mainformbg;
+            this.ClientSize = new System.Drawing.Size(640, 295);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GUI";
             this.Text = "Taskbar Temp Monitor";
+            this.Load += new System.EventHandler(this.GUI_Load);
             this.ResumeLayout(false);
 
         }

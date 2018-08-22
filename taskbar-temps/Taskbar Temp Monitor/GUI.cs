@@ -230,8 +230,10 @@ namespace Taskbar_Temp_Monitor
             this.Close();
         }
 
+        private void GUI_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 
 
