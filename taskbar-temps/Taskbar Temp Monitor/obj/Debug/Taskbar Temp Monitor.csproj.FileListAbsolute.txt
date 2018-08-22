@@ -1,0 +1,10 @@
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\Taskbar Temp Monitor.exe.config
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\Taskbar Temp Monitor.exe
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\bin\Debug\Taskbar Temp Monitor.pdb
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.csprojAssemblyReference.cache
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar_Temp_Monitor.Properties.Resources.resources
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.csproj.GenerateResource.cache
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.csproj.CoreCompileInputs.cache
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.exe
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.pdb
+C:\Users\overc\source\repos\taskbar-temps\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar_Temp_Monitor.GUI.resources
