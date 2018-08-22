@@ -80,18 +80,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\amdcpu.ico" />
-    <Content Include="Resources\cpu_iconblue1_256px.ico" />
-    <Content Include="Resources\cpu_icongreen1_256px.ico" />
-    <Content Include="Resources\cpu_iconorange1_256px.ico" />
-    <Content Include="Resources\cpu_iconpurple1_256px.ico" />
-    <Content Include="Resources\cpu_iconred1_256px.ico" />
-    <Content Include="Resources\cpu_iconyellow1_256px.ico" />
-    <Content Include="Resources\danger_icon.ico" />
-    <Content Include="Resources\icon-template.ico" />
-    <Content Include="Resources\question.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\OpenHardwareMonitor.csproj">
       <Project>{f5e0c1f7-9e9b-46f2-ac88-8c9c1c923880}</Project>
       <Name>OpenHardwareMonitor</Name>
@@ -100,6 +88,60 @@
       <Project>{b0397530-545a-471d-bb74-027ae456df1a}</Project>
       <Name>OpenHardwareMonitorLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\30.ico" />
+    <Content Include="Resources\31.ico" />
+    <Content Include="Resources\32.ico" />
+    <Content Include="Resources\33.ico" />
+    <Content Include="Resources\34.ico" />
+    <Content Include="Resources\35.ico" />
+    <Content Include="Resources\36.ico" />
+    <Content Include="Resources\37.ico" />
+    <Content Include="Resources\38.ico" />
+    <Content Include="Resources\39.ico" />
+    <Content Include="Resources\40.ico" />
+    <Content Include="Resources\41.ico" />
+    <Content Include="Resources\42.ico" />
+    <Content Include="Resources\43.ico" />
+    <Content Include="Resources\44.ico" />
+    <Content Include="Resources\45.ico" />
+    <Content Include="Resources\46.ico" />
+    <Content Include="Resources\47.ico" />
+    <Content Include="Resources\48.ico" />
+    <Content Include="Resources\49.ico" />
+    <Content Include="Resources\50.ico" />
+    <Content Include="Resources\51.ico" />
+    <Content Include="Resources\52.ico" />
+    <Content Include="Resources\53.ico" />
+    <Content Include="Resources\54.ico" />
+    <Content Include="Resources\55.ico" />
+    <Content Include="Resources\56.ico" />
+    <Content Include="Resources\57.ico" />
+    <Content Include="Resources\58.ico" />
+    <Content Include="Resources\59.ico" />
+    <Content Include="Resources\60.ico" />
+    <Content Include="Resources\61.ico" />
+    <Content Include="Resources\62.ico" />
+    <Content Include="Resources\63.ico" />
+    <Content Include="Resources\64.ico" />
+    <Content Include="Resources\65.ico" />
+    <Content Include="Resources\66.ico" />
+    <Content Include="Resources\67.ico" />
+    <Content Include="Resources\68.ico" />
+    <Content Include="Resources\69.ico" />
+    <Content Include="Resources\70.ico" />
+    <Content Include="Resources\71.ico" />
+    <Content Include="Resources\72.ico" />
+    <Content Include="Resources\73.ico" />
+    <Content Include="Resources\74.ico" />
+    <Content Include="Resources\75.ico" />
+    <Content Include="Resources\76.ico" />
+    <Content Include="Resources\77.ico" />
+    <Content Include="Resources\78.ico" />
+    <Content Include="Resources\79.ico" />
+    <Content Include="Resources\fire.ico" />
+    <Content Include="Resources\frost.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

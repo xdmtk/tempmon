@@ -118,31 +118,160 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cpu_iconblue1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cpu_iconblue1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\fire.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cpu_icongreen1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cpu_icongreen1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\frost.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cpu_iconorange1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cpu_iconorange1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\30.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cpu_iconpurple1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cpu_iconpurple1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\31.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cpu_iconred1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cpu_iconred1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\32.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cpu_iconyellow1_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cpu_iconyellow1_256px.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\33.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="danger_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\danger_icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\34.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_template" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\icon-template.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\35.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\question.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\36.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\37.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\38.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\39.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\41.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\42.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_43" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\43.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\44.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\45.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_46" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\46.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_47" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\47.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\48.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_49" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\49.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\50.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\51.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_52" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\52.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_53" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\53.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_54" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\54.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_55" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\55.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_56" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\56.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_57" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\57.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_58" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\58.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\59.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\60.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\61.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_62" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\62.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_63" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\63.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\64.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_65" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\65.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_66" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\66.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_67" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\67.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\68.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_69" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\69.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\70.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_71" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\71.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\72.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_73" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\73.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_74" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\74.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_75" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\75.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_76" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\76.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_77" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\77.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_78" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\78.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_79" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\79.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

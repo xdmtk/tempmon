@@ -13,8 +13,55 @@ using OpenHardwareMonitor.Utilities;
 
 namespace Taskbar_Temp_Monitor
 {
+   
+
     public partial class GUI : Form
     {
+        Icon[] tempArray = new Icon[]
+        {
+          Properties.Resources._30,
+          Properties.Resources._31,
+          Properties.Resources._32,
+          Properties.Resources._33,
+          Properties.Resources._34,
+          Properties.Resources._35,
+          Properties.Resources._36,
+          Properties.Resources._37,
+          Properties.Resources._38,
+          Properties.Resources._39,
+          Properties.Resources._40,
+          Properties.Resources._41,
+          Properties.Resources._42,
+          Properties.Resources._43,
+          Properties.Resources._44,
+          Properties.Resources._45,
+          Properties.Resources._46,
+          Properties.Resources._47,
+          Properties.Resources._48,
+          Properties.Resources._49,
+          Properties.Resources._50,
+          Properties.Resources._51,
+          Properties.Resources._52,
+          Properties.Resources._53,
+          Properties.Resources._54,
+          Properties.Resources._55,
+          Properties.Resources._56,
+          Properties.Resources._57,
+          Properties.Resources._58,
+          Properties.Resources._59,
+          Properties.Resources._50,
+          Properties.Resources._61,
+          Properties.Resources._62,
+          Properties.Resources._63,
+          Properties.Resources._64,
+          Properties.Resources._65,
+          Properties.Resources._66,
+          Properties.Resources._67,
+          Properties.Resources._68,
+          Properties.Resources._69,
+          Properties.Resources._70,
+        };
+
         NotifyIcon notify;
         ContextMenu context;
         MenuItem menu;
@@ -59,7 +106,6 @@ namespace Taskbar_Temp_Monitor
         
             myComputer.Open();
 
-            notify.Icon = Properties.Resources.icon_template;
             notify.ContextMenu = this.context;
             notify.Text = "Form 1 Example";
             notify.Visible = true;
@@ -75,42 +121,30 @@ namespace Taskbar_Temp_Monitor
         private void runMainLogicLoop(object sender, EventArgs e)
         {
             float? ct = getCpuTemp();
-            if (ct < 25)
+            decimal ctint = Math.Floor((decimal)ct);
+            if (ctint < 30)
             {
-                notify.Icon = Properties.Resources.cpu_iconpurple1_256px;
+                notify.Icon = Properties.Resources.frost;
             }
-            else if (ct >= 25 && ct < 30)
+            else if (ctint > 70)
             {
-                notify.Icon = Properties.Resources.cpu_iconblue1_256px;
-            } 
-            else if (ct >= 30 && ct < 39) 
-            {
-                notify.Icon = Properties.Resources.cpu_icongreen1_256px;
-            } 
-            else if (ct >= 40 && ct < 44) 
-            {
-                notify.Icon = Properties.Resources.cpu_iconyellow1_256px;
-            } 
-            else if (ct >= 44 && ct < 50) 
-            {
-                notify.Icon = Properties.Resources.cpu_iconorange1_256px;
+                notify.Icon = Properties.Resources.fire;
             }
-            else if (ct >= 50 && ct < 70) 
-            {
-                notify.Icon = Properties.Resources.cpu_iconred1_256px;
-            } 
-            else if (ct >= 70) 
-            {
-                notify.Icon = Properties.Resources.danger_icon;
-            } 
             else
             {
-                notify.Icon = Properties.Resources.question;
-                notify.Text = "Unsupported CPU";
-                return;
+                for (int i = 30; i <= 70; ++i)
+                {
+                    if (ctint == i)
+                    {
+                        notify.Icon = tempArray[i - 30];
+                    }
+                }
             }
-            notify.Text = ct.ToString();
-            return;
+            notify.Text = ctint.ToString();
+
+
+
+
         }
         private float? getCpuTemp()
         {
