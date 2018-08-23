@@ -10,5 +10,11 @@ Release coming soon.
 
 Screenshots
 ----
+#### In The Taskbar:
 ![](https://i.imgur.com/NnAbMkl.png)
+
+#### Intel Machine (No Nodes)
 ![](https://i.imgur.com/MOwmy9T.png)
+
+#### AMD Machine (With Nodes)
+![](https://i.imgur.com/zzPduGR.png)
