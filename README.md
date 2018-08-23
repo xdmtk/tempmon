@@ -11,4 +11,4 @@ Release coming soon.
 Screenshots
 ----
 ![](https://i.imgur.com/NnAbMkl.png)
-![](https://i.imgur.com/wA7wKSX.jpg)
+![](https://i.imgur.com/MOwmy9T.png)
