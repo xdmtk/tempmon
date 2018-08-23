@@ -87,6 +87,9 @@ namespace Taskbar_Temp_Monitor
             base.SetVisibleCore(value);
         }
 
+
+
+
         public GUI()
         {
             InitializeComponent();
@@ -119,7 +122,10 @@ namespace Taskbar_Temp_Monitor
             cpuImgHolder.MouseDown += new MouseEventHandler(form_Drag);
             cpuImgHolder.MouseMove += new MouseEventHandler(form_Move);
             cpuImgHolder.MouseUp += new MouseEventHandler(form_DragComplete);
+            
 
+            // Kill Icon on closing
+            this.FormClosing += new FormClosingEventHandler(kill_Icon);
 
 
             // Open menu on form right click
@@ -217,7 +223,9 @@ namespace Taskbar_Temp_Monitor
 
 
          }
+       
         
+        // Set either AMD or Intel pic
         private void setFormPic(string cpuName)
         {
             cpuPic.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -232,7 +240,7 @@ namespace Taskbar_Temp_Monitor
         }
 
 
-
+        // OHM Logic to get CPU temperature
         private float? getCpuTemp(ref string cpuName)
         {
            float? cpuTemp;
@@ -264,6 +272,8 @@ namespace Taskbar_Temp_Monitor
             return null;
         }
 
+
+        
         private void showForm_Click(object sender, EventArgs e)
         {
             if (this.Visible == false)
@@ -283,6 +293,8 @@ namespace Taskbar_Temp_Monitor
         }
             
 
+
+        // Drag form functions
         private void form_Drag(object sender, MouseEventArgs e)
         {
                 md = true;
@@ -335,10 +347,10 @@ namespace Taskbar_Temp_Monitor
         private void marqueeTitle(object sender, EventArgs e)
         {
 
-            if (xPos <= ((-1*progName.Width)))
+            if (xPos <= ((-1*(progName.Width))))
             {
 
-                progName.Location = new Point(this.Width-progName.Width, yPos);
+                progName.Location = new Point(this.Width-(progName.Width/8), yPos);
                 xPos = this.Width+progName.Width;
             }
             else
@@ -347,6 +359,11 @@ namespace Taskbar_Temp_Monitor
                 xPos -= 2;
             }
 
+        }
+
+        private void kill_Icon(object sender, EventArgs e)
+        {
+            notify.Visible = false;
         }
     }
 
