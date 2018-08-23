@@ -138,11 +138,15 @@ namespace Taskbar_Temp_Monitor
             cpuImgHolder.MouseClick += new MouseEventHandler(openExitMenu);
             cpuPic.MouseClick += new MouseEventHandler(openExitMenu);
             progName.MouseClick += new MouseEventHandler(openExitMenu);
-            
+
             // OpenHardwareMonitor Object
             this.myComputer = new Computer
             {
-                CPUEnabled = true
+                CPUEnabled = true,
+                HDDEnabled = true,
+                MainboardEnabled = true,
+                GPUEnabled = true
+                
             };
 
 
@@ -212,21 +216,34 @@ namespace Taskbar_Temp_Monitor
                     case HardwareType.CPU:
                         cpu = rootNode.Nodes.Add(hw.Name);
                         cpu.ImageIndex = 6;
+                        setupSubNodes(hw, cpu);
                         break;
                     case HardwareType.Mainboard:
                         mainboard = rootNode.Nodes.Add(hw.Name);
                         mainboard.ImageIndex = 5;
+                        setupSubNodes(hw, mainboard);
+                        break;
+                    case HardwareType.HDD:
+                        hdd = rootNode.Nodes.Add(hw.Name);
+                        hdd.ImageIndex = 4;
+                        setupSubNodes(hw, hdd);
                         break;
 
 
                 }
             }
             
+        }
 
-            
-            
 
-            
+        private void setupSubNodes(IHardware hardware, TreeNode subNode)
+        {
+            TreeNode nodelet;
+            foreach (var sensor in hardware.Sensors)
+            {
+                nodelet = subNode.Nodes.Add(sensor.Name + " - "  + sensor.Value.ToString());
+                nodelet.ImageIndex = 58;
+            }
         }
         private void runMainLogicLoop(object sender, EventArgs e)
         {
