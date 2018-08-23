@@ -69,9 +69,11 @@ namespace Taskbar_Temp_Monitor
         MenuItem showForm;
         Computer myComputer;
         Timer tempTicker;
+        Timer titleTicker;
         ContextMenuStrip formContext;
 
         private bool md;
+        private int xPos = 0, yPos = 5;
         private Point lastLocation;
         
         protected override void SetVisibleCore(bool value)
@@ -96,6 +98,7 @@ namespace Taskbar_Temp_Monitor
             this.showForm = new MenuItem();
             this.aboutItem = new MenuItem();
             this.tempTicker = new Timer();
+            this.titleTicker = new Timer();
             this.notify = new NotifyIcon(this.components);
             progName.BackColor = Color.Transparent;
             cpuImgHolder.BackColor = Color.Transparent;
@@ -110,11 +113,12 @@ namespace Taskbar_Temp_Monitor
             progName.MouseDown += new MouseEventHandler(form_Drag);
             progName.MouseMove += new MouseEventHandler(form_Move);
             progName.MouseUp += new MouseEventHandler(form_DragComplete);
-
-            progName.MouseDown += new MouseEventHandler(form_Drag);
-            progName.MouseMove += new MouseEventHandler(form_Move);
-            progName.MouseUp += new MouseEventHandler(form_DragComplete);
-
+            cpuPic.MouseDown += new MouseEventHandler(form_Drag);
+            cpuPic.MouseMove += new MouseEventHandler(form_Move);
+            cpuPic.MouseUp += new MouseEventHandler(form_DragComplete);
+            cpuImgHolder.MouseDown += new MouseEventHandler(form_Drag);
+            cpuImgHolder.MouseMove += new MouseEventHandler(form_Move);
+            cpuImgHolder.MouseUp += new MouseEventHandler(form_DragComplete);
 
 
 
@@ -133,7 +137,9 @@ namespace Taskbar_Temp_Monitor
 
             // Set timer interval and tick function
             tempTicker.Interval = 100;
-            tempTicker.Tick += new EventHandler(this.runMainLogicLoop);
+            tempTicker.Tick += new EventHandler(runMainLogicLoop);
+            titleTicker.Interval = 10;
+            titleTicker.Tick += new EventHandler(marqueeTitle);
 
             // Add menu items to the contextMenu item (taskbar menu)
             this.context.MenuItems.AddRange(
@@ -160,6 +166,7 @@ namespace Taskbar_Temp_Monitor
             // Start timer, initialize OHM object, and make taskbar icon visible
             myComputer.Open();
             tempTicker.Start();
+            titleTicker.Start();
             notify.ContextMenu = this.context;
             notify.Visible = true;
 
@@ -322,6 +329,23 @@ namespace Taskbar_Temp_Monitor
         }
         private void cpuImgHolder_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void marqueeTitle(object sender, EventArgs e)
+        {
+
+            if (xPos <= ((-1*progName.Width)))
+            {
+
+                progName.Location = new Point(this.Width-progName.Width, yPos);
+                xPos = this.Width+progName.Width;
+            }
+            else
+            {
+                progName.Location = new Point(xPos, yPos);
+                xPos -= 2;
+            }
 
         }
     }
