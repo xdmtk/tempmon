@@ -62,6 +62,11 @@ namespace Taskbar_Temp_Monitor
           Properties.Resources._70,
         };
 
+
+
+
+
+        // Fork items
         NotifyIcon notify;
         ContextMenu context;
         MenuItem exitItem;
@@ -165,21 +170,64 @@ namespace Taskbar_Temp_Monitor
             this.showForm.Index = 0;
             this.showForm.Text = "O&pen";
             this.showForm.Click += new EventHandler(this.showForm_Click);
-            
-        
+
+
 
 
             // Start timer, initialize OHM object, and make taskbar icon visible
             myComputer.Open();
             tempTicker.Start();
             titleTicker.Start();
+            setupTreeNodes();
             notify.ContextMenu = this.context;
             notify.Visible = true;
 
 
         }
 
+        private void setupTreeNodes()
+        {
 
+            // Set up treeView nodes
+            treeView.Font = SystemFonts.MessageBoxFont;
+            ImageList nodeIcons = new ImageList();
+            treeView.ImageList = nodeIcons;
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("computer.png"));
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("nvidia.png"));
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("ati.png"));
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("hdd.png"));
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("bigng.png"));
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("mainboard.png"));
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("chip.png"));
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("ram.png"));
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("gadget.png"));
+            nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("computer.png"));
+            TreeNode rootNode = treeView.Nodes.Add(Environment.MachineName);
+            rootNode.ImageIndex = 0;
+            TreeNode mainboard, cpu, hdd, gpu, fans;
+            foreach (var hw in myComputer.Hardware)
+            {
+                switch (hw.HardwareType)
+                {
+                    case HardwareType.CPU:
+                        cpu = rootNode.Nodes.Add(hw.Name);
+                        cpu.ImageIndex = 6;
+                        break;
+                    case HardwareType.Mainboard:
+                        mainboard = rootNode.Nodes.Add(hw.Name);
+                        mainboard.ImageIndex = 5;
+                        break;
+
+
+                }
+            }
+            
+
+            
+            
+
+            
+        }
         private void runMainLogicLoop(object sender, EventArgs e)
         {
 
@@ -257,7 +305,14 @@ namespace Taskbar_Temp_Monitor
                             if (sensor.Value != null)
                             {
                                 cpuTemp = sensor.Value;
-                                return ((cpuTemp - 32) * (float?)(5.0/9.0));
+                                if (cpuName.ToLower().Contains("amd") && cpuName.ToLower().Contains("x"))
+                                {
+                                    return ((cpuTemp - 32) * (float?)(5.0 / 9.0));
+                                }
+                                else
+                                {
+                                    return cpuTemp;
+                                }
                             }
                             else
                             {
@@ -358,6 +413,11 @@ namespace Taskbar_Temp_Monitor
                 progName.Location = new Point(xPos, yPos);
                 xPos -= 2;
             }
+
+        }
+
+        private void GUI_Load(object sender, EventArgs e)
+        {
 
         }
 

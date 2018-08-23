@@ -32,7 +32,7 @@
             this.progName = new System.Windows.Forms.Label();
             this.cpuImgHolder = new System.Windows.Forms.GroupBox();
             this.cpuPic = new System.Windows.Forms.PictureBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.treeView = new System.Windows.Forms.TreeView();
             this.cpuImgHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpuPic)).BeginInit();
             this.SuspendLayout();
@@ -69,12 +69,12 @@
             this.cpuPic.TabIndex = 0;
             this.cpuPic.TabStop = false;
             // 
-            // treeView1
+            // treeView
             // 
-            this.treeView1.Location = new System.Drawing.Point(312, 44);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(304, 226);
-            this.treeView1.TabIndex = 2;
+            this.treeView.Location = new System.Drawing.Point(312, 44);
+            this.treeView.Name = "treeView";
+            this.treeView.Size = new System.Drawing.Size(304, 226);
+            this.treeView.TabIndex = 2;
             // 
             // GUI
             // 
@@ -82,13 +82,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Taskbar_Temp_Monitor.Properties.Resources.mainformbg;
             this.ClientSize = new System.Drawing.Size(640, 295);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.treeView);
             this.Controls.Add(this.cpuImgHolder);
             this.Controls.Add(this.progName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GUI";
             this.Text = "Taskbar Temp Monitor";
+            this.Load += new System.EventHandler(this.GUI_Load);
             this.cpuImgHolder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cpuPic)).EndInit();
             this.ResumeLayout(false);
@@ -101,7 +102,7 @@
         private System.Windows.Forms.Label progName;
         private System.Windows.Forms.GroupBox cpuImgHolder;
         private System.Windows.Forms.PictureBox cpuPic;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView treeView;
     }
 }
 
