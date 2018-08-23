@@ -97,6 +97,8 @@ namespace Taskbar_Temp_Monitor
             this.tempTicker = new Timer();
             this.notify = new NotifyIcon(this.components);
             progName.BackColor = Color.Transparent;
+            cpuImgHolder.BackColor = Color.Transparent;
+            
             this.Opacity = 80;
             this.AllowTransparency = true;
 
@@ -186,13 +188,28 @@ namespace Taskbar_Temp_Monitor
 
 
             notify.Text = cpuName + ": " + ctint.ToString() + "C";
-            
+
+            setFormPic(cpuName);
 
 
 
 
          }
         
+        private void setFormPic(string cpuName)
+        {
+            cpuPic.SizeMode = PictureBoxSizeMode.StretchImage;
+            if (cpuName.ToLower().Contains("amd"))
+            {
+                cpuPic.Image = Properties.Resources.amd_icon;
+            }
+            else
+            {
+                cpuPic.Image = Properties.Resources.intel_icon;
+            }
+        }
+
+
 
         private float? getCpuTemp(ref string cpuName)
         {
@@ -265,6 +282,10 @@ namespace Taskbar_Temp_Monitor
             md = false;
         }
 
+        private void cpuImgHolder_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

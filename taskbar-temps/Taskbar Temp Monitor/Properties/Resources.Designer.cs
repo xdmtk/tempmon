@@ -561,6 +561,16 @@ namespace Taskbar_Temp_Monitor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap amd_icon {
+            get {
+                object obj = ResourceManager.GetObject("amd_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         public static System.Drawing.Icon fire {
@@ -577,6 +587,16 @@ namespace Taskbar_Temp_Monitor.Properties {
             get {
                 object obj = ResourceManager.GetObject("frost", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap intel_icon {
+            get {
+                object obj = ResourceManager.GetObject("intel_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
