@@ -29,7 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
+            this.progName = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // progName
+            // 
+            this.progName.AutoSize = true;
+            this.progName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progName.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.progName.Location = new System.Drawing.Point(9, 5);
+            this.progName.Name = "progName";
+            this.progName.Size = new System.Drawing.Size(345, 19);
+            this.progName.TabIndex = 0;
+            this.progName.Text = "TASKBAR TEMPERATURE MONiTOR  v1.0";
             // 
             // GUI
             // 
@@ -37,16 +49,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Taskbar_Temp_Monitor.Properties.Resources.mainformbg;
             this.ClientSize = new System.Drawing.Size(640, 295);
+            this.Controls.Add(this.progName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GUI";
             this.Text = "Taskbar Temp Monitor";
-            this.Load += new System.EventHandler(this.GUI_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label progName;
     }
 }
 

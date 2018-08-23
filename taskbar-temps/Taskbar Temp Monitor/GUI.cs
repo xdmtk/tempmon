@@ -69,6 +69,9 @@ namespace Taskbar_Temp_Monitor
         MenuItem showForm;
         Computer myComputer;
         Timer tempTicker;
+
+        private bool md;
+        private Point lastLocation;
         
         protected override void SetVisibleCore(bool value)
         {
@@ -93,6 +96,16 @@ namespace Taskbar_Temp_Monitor
             this.aboutItem = new MenuItem();
             this.tempTicker = new Timer();
             this.notify = new NotifyIcon(this.components);
+            progName.BackColor = Color.Transparent;
+            this.Opacity = 80;
+            this.AllowTransparency = true;
+
+            // Make borderless form draggable
+            this.MouseDown += new MouseEventHandler(form_Drag);
+            this.MouseMove += new MouseEventHandler(form_Move);
+            this.MouseUp += new MouseEventHandler(form_DragComplete);
+
+            
 
             // OpenHardwareMonitor Object
             this.myComputer = new Computer
@@ -229,11 +242,29 @@ namespace Taskbar_Temp_Monitor
         {
             this.Close();
         }
+            
 
-        private void GUI_Load(object sender, EventArgs e)
+        private void form_Drag(object sender, MouseEventArgs e)
         {
-
+            md = true;
+            lastLocation = e.Location;
         }
+
+        private void form_Move(object sender, MouseEventArgs e)
+        {
+            if (md)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
+            }
+        }
+
+        private void form_DragComplete(object sender, MouseEventArgs e)
+        {
+            md = false;
+        }
+
     }
 
 
