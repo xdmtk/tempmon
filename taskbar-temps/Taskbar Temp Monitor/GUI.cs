@@ -69,6 +69,7 @@ namespace Taskbar_Temp_Monitor
         MenuItem showForm;
         Computer myComputer;
         Timer tempTicker;
+        ContextMenuStrip formContext;
 
         private bool md;
         private Point lastLocation;
@@ -106,9 +107,23 @@ namespace Taskbar_Temp_Monitor
             this.MouseDown += new MouseEventHandler(form_Drag);
             this.MouseMove += new MouseEventHandler(form_Move);
             this.MouseUp += new MouseEventHandler(form_DragComplete);
+            progName.MouseDown += new MouseEventHandler(form_Drag);
+            progName.MouseMove += new MouseEventHandler(form_Move);
+            progName.MouseUp += new MouseEventHandler(form_DragComplete);
 
+            progName.MouseDown += new MouseEventHandler(form_Drag);
+            progName.MouseMove += new MouseEventHandler(form_Move);
+            progName.MouseUp += new MouseEventHandler(form_DragComplete);
+
+
+
+
+            // Open menu on form right click
+            this.MouseClick += new MouseEventHandler(openExitMenu);
+            cpuImgHolder.MouseClick += new MouseEventHandler(openExitMenu);
+            cpuPic.MouseClick += new MouseEventHandler(openExitMenu);
+            progName.MouseClick += new MouseEventHandler(openExitMenu);
             
-
             // OpenHardwareMonitor Object
             this.myComputer = new Computer
             {
@@ -138,7 +153,7 @@ namespace Taskbar_Temp_Monitor
             this.showForm.Index = 0;
             this.showForm.Text = "O&pen";
             this.showForm.Click += new EventHandler(this.showForm_Click);
-
+            
         
 
 
@@ -263,17 +278,32 @@ namespace Taskbar_Temp_Monitor
 
         private void form_Drag(object sender, MouseEventArgs e)
         {
-            md = true;
-            lastLocation = e.Location;
+                md = true;
+                lastLocation = e.Location;
         }
 
         private void form_Move(object sender, MouseEventArgs e)
         {
-            if (md)
+
+            // Allow dragging from Form and Title Label
+            if (sender.GetType().Name == "GUI")
             {
-                this.Location = new Point(
-                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
-                this.Update();
+                if (md)
+                {
+                    this.Location = new Point(
+                        (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                    this.Update();
+                }
+            }
+            else
+            {
+                if (md)
+                {
+                    Form thisForm = ActiveControl.FindForm();
+                    thisForm.Location = new Point(
+                        (thisForm.Location.X - lastLocation.X) + e.X, (thisForm.Location.Y - lastLocation.Y) + e.Y);
+                    thisForm.Update();
+                }
             }
         }
 
@@ -281,7 +311,15 @@ namespace Taskbar_Temp_Monitor
         {
             md = false;
         }
+        private void openExitMenu(object sender, MouseEventArgs e)
+        {
 
+            Point currentLoc = new Point(e.Location.X, e.Location.Y);
+            if (e.Button == MouseButtons.Right)
+            {
+                context.Show(this,currentLoc);
+            }
+        }
         private void cpuImgHolder_Enter(object sender, EventArgs e)
         {
 
