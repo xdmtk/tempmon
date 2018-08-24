@@ -75,6 +75,7 @@ namespace Taskbar_Temp_Monitor
         Computer myComputer;
         Timer tempTicker;
         Timer titleTicker;
+        Timer nodeTicker;
         ContextMenuStrip formContext;
 
         private bool md;
@@ -107,6 +108,7 @@ namespace Taskbar_Temp_Monitor
             this.aboutItem = new MenuItem();
             this.tempTicker = new Timer();
             this.titleTicker = new Timer();
+            this.nodeTicker = new Timer();
             this.notify = new NotifyIcon(this.components);
             progName.BackColor = Color.Transparent;
             cpuImgHolder.BackColor = Color.Transparent;
@@ -153,8 +155,15 @@ namespace Taskbar_Temp_Monitor
             // Set timer interval and tick function
             tempTicker.Interval = 100;
             tempTicker.Tick += new EventHandler(runMainLogicLoop);
-            titleTicker.Interval = 10;
-            titleTicker.Tick += new EventHandler(marqueeTitle);
+
+            // Remove marquee
+            //            titleTicker.Interval = 10;
+            //            titleTicker.Tick += new EventHandler(marqueeTitle);
+
+            nodeTicker.Tick += new EventHandler(updateTreeNodes);
+            nodeTicker.Interval = 1000;
+            
+
 
             // Add menu items to the contextMenu item (taskbar menu)
             this.context.MenuItems.AddRange(
@@ -182,14 +191,22 @@ namespace Taskbar_Temp_Monitor
             myComputer.Open();
             tempTicker.Start();
             titleTicker.Start();
-            setupTreeNodes();
+            setupTreeNodes(false);
             notify.ContextMenu = this.context;
             notify.Visible = true;
+            nodeTicker.Start();
 
 
         }
 
-        private void setupTreeNodes()
+        private void updateTreeNodes(object sender, EventArgs e)
+        {
+            setupTreeNodes(true);
+        }
+        TreeNode rootNode;
+        TreeNode mainboard, cpu, hdd, gpu, fans;
+
+        private void setupTreeNodes(bool update)
         {
 
             // Set up treeView nodes
@@ -206,43 +223,149 @@ namespace Taskbar_Temp_Monitor
             nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("ram.png"));
             nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("gadget.png"));
             nodeIcons.Images.Add(OpenHardwareMonitor.Utilities.EmbeddedResources.GetImage("computer.png"));
-            TreeNode rootNode = treeView.Nodes.Add(Environment.MachineName);
-            rootNode.ImageIndex = 0;
-            TreeNode mainboard, cpu, hdd, gpu, fans;
+            nodeIcons.Images.Add(Properties.Resources.Data_Flow_Chart_icon);
+
+
+            if (update)
+            {
+                
+                treeView.Nodes[0].Text = Environment.MachineName;
+            }
+            else
+            {
+                rootNode = treeView.Nodes.Add(Environment.MachineName);
+                rootNode.ImageIndex = 0;
+            }
+
+            int count = 0;
             foreach (var hw in myComputer.Hardware)
             {
-                switch (hw.HardwareType)
+                if (update)
                 {
-                    case HardwareType.CPU:
-                        cpu = rootNode.Nodes.Add(hw.Name);
-                        cpu.ImageIndex = 6;
-                        setupSubNodes(hw, cpu);
-                        break;
-                    case HardwareType.Mainboard:
-                        mainboard = rootNode.Nodes.Add(hw.Name);
-                        mainboard.ImageIndex = 5;
-                        setupSubNodes(hw, mainboard);
-                        break;
-                    case HardwareType.HDD:
-                        hdd = rootNode.Nodes.Add(hw.Name);
-                        hdd.ImageIndex = 4;
-                        setupSubNodes(hw, hdd);
-                        break;
+                    switch (hw.HardwareType)
+                    {
+                        case HardwareType.CPU:
+                            rootNode.Nodes[count].Text = (hw.Name);
+                            setupSubNodes(hw, cpu, update);
+                            break;
+                        case HardwareType.Mainboard:
+                            rootNode.Nodes[count].Text = (hw.Name);
+                            setupSubNodes(hw, mainboard, update);
+                            break;
+                        case HardwareType.HDD:
+                            rootNode.Nodes[count].Text = (hw.Name);
+                            setupSubNodes(hw, hdd,update);
+                            break;
 
+
+                    }
 
                 }
+                else
+                {
+                    switch (hw.HardwareType)
+                    {
+                        case HardwareType.CPU:
+                            cpu = rootNode.Nodes.Add(hw.Name);
+                            cpu.ImageIndex = 6;
+                            setupSubNodes(hw, cpu, update);
+                            break;
+                        case HardwareType.Mainboard:
+                            mainboard = rootNode.Nodes.Add(hw.Name);
+                            mainboard.ImageIndex = 5;
+                            setupSubNodes(hw, mainboard, update);
+                            break;
+                        case HardwareType.HDD:
+                            hdd = rootNode.Nodes.Add(hw.Name);
+                            hdd.ImageIndex = 4;
+                            setupSubNodes(hw, hdd,update);
+                            break;
+
+
+                    }
+                }
             }
-            
         }
 
 
-        private void setupSubNodes(IHardware hardware, TreeNode subNode)
+        private void setupSubNodes(IHardware hardware, TreeNode subNode, bool update)
         {
+                        //update ? (subNode.Nodes[count].Text = (sensor.Name + " - "  + ((decimal)sensor.Value).ToString() + "%");
+           
             TreeNode nodelet;
+            hardware.Update();
+            int count = 0;
             foreach (var sensor in hardware.Sensors)
             {
-                nodelet = subNode.Nodes.Add(sensor.Name + " - "  + sensor.Value.ToString());
-                nodelet.ImageIndex = 58;
+                if (update)
+                {
+                    try
+                    {
+                        switch (sensor.SensorType)
+                        {
+                            case SensorType.Load:
+                                subNode.Nodes[count].Text = (sensor.Name + " - " + ((decimal)sensor.Value).ToString() + "%");
+                                break;
+
+                            case SensorType.Clock:
+                                subNode.Nodes[count].Text = (sensor.Name + " - " + sensor.Value.ToString() + "MHz");
+                                break;
+
+                            case SensorType.Temperature:
+                                subNode.Nodes[count].Text = (sensor.Name + " - " + ((decimal)sensor.Value).ToString() + "C");
+                                break;
+
+                            case SensorType.Fan:
+                                subNode.Nodes[count].Text = (sensor.Name + " - " + (sensor.Value).ToString() + " RPM");
+                                break;
+
+                            case SensorType.Power:
+                                subNode.Nodes[count].Text = (sensor.Name + " - " + (sensor.Value).ToString() + "V");
+                                break;
+
+                            default:
+                                subNode.Nodes[count].Text = (sensor.Name + " - " + (sensor.Value).ToString());
+                                break;
+                        }
+                    }
+                    catch
+                    {
+                        count++;
+                        count--;
+                    }
+                }
+                else
+                {
+                    switch (sensor.SensorType)
+                    {
+                        case SensorType.Load:
+                            nodelet = subNode.Nodes.Add(sensor.Name + " - " + ((decimal)sensor.Value).ToString() + "%");
+                            break;
+
+                        case SensorType.Clock:
+                            nodelet = subNode.Nodes.Add(sensor.Name + " - " + sensor.Value.ToString() + "MHz");
+                            break;
+
+                        case SensorType.Temperature:
+                            nodelet = subNode.Nodes.Add(sensor.Name + " - " + ((decimal)sensor.Value).ToString() + "C");
+                            break;
+
+                        case SensorType.Fan:
+                            nodelet = subNode.Nodes.Add(sensor.Name + " - " + (sensor.Value).ToString() + " RPM");
+                            break;
+
+                        case SensorType.Power:
+                            nodelet = subNode.Nodes.Add(sensor.Name + " - " + (sensor.Value).ToString() + "V");
+                            break;
+
+                        default:
+                            nodelet = subNode.Nodes.Add(sensor.Name + " - " + (sensor.Value).ToString());
+                            break;
+
+                    }
+                    nodelet.ImageIndex = 10;
+                }
+                count++;
             }
         }
         private void runMainLogicLoop(object sender, EventArgs e)

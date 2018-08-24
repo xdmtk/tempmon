@@ -141,6 +141,7 @@
     <Content Include="Resources\78.ico" />
     <Content Include="Resources\79.ico" />
     <Content Include="Resources\amd-icon.png" />
+    <Content Include="Resources\Data-Flow-Chart-icon.png" />
     <Content Include="Resources\fire.ico" />
     <Content Include="Resources\frost.ico" />
     <Content Include="Resources\intel-icon.png" />

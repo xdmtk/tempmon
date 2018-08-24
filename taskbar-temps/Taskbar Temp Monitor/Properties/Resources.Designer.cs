@@ -571,6 +571,16 @@ namespace Taskbar_Temp_Monitor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Data_Flow_Chart_icon {
+            get {
+                object obj = ResourceManager.GetObject("Data_Flow_Chart_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         public static System.Drawing.Icon fire {
