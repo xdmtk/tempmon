@@ -1,0 +1,19 @@
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\Taskbar Temp Monitor.exe.config
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\Taskbar Temp Monitor.exe
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\Taskbar Temp Monitor.pdb
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\OpenHardwareMonitor.exe
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\OpenHardwareMonitorLib.dll
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\OxyPlot.dll
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\OxyPlot.WindowsForms.dll
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\Aga.Controls.dll
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\OpenHardwareMonitor.exe.config
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Release\Taskbar Temp Monitor.csprojAssemblyReference.cache
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Release\Taskbar_Temp_Monitor.GUI.resources
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Release\Taskbar_Temp_Monitor.Properties.Resources.resources
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Release\Taskbar Temp Monitor.csproj.GenerateResource.cache
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Release\Taskbar Temp Monitor.csproj.CoreCompileInputs.cache
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Release\Taskbar Temp Monitor.csproj.CopyComplete
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Release\Taskbar Temp Monitor.exe
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Release\Taskbar Temp Monitor.pdb
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\Costura.dll
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Release\Costura.xml
