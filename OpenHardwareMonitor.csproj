@@ -34,6 +34,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -178,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Resources\app.manifest">
       <SubType>Designer</SubType>
     </None>
@@ -304,4 +307,11 @@
     <PostBuildEvent>copy "$(ProjectDir)External\*.*" "$(TargetDir)"
 copy "$(ProjectDir)Licenses\*.*" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
+  <Import Project="packages\Costura.Fody.3.1.0\build\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.3.1.0\build\Costura.Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Costura.Fody.3.1.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.3.1.0\build\Costura.Fody.targets'))" />
+  </Target>
 </Project>

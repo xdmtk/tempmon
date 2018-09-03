@@ -36,3 +36,7 @@ C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\
 C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.csproj.CopyComplete
 C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.exe
 C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.pdb
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Debug\Taskbar Temp Monitor.exe.manifest
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\bin\Debug\Taskbar Temp Monitor.application
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.exe.manifest
+C:\Users\overc\source\repos\taskbar-temps-sa\taskbar-temps\Taskbar Temp Monitor\obj\Debug\Taskbar Temp Monitor.application

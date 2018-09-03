@@ -153,7 +153,7 @@ namespace Taskbar_Temp_Monitor
 
 
             // Set timer interval and tick function
-            tempTicker.Interval = 100;
+            tempTicker.Interval = 1000;
             tempTicker.Tick += new EventHandler(runMainLogicLoop);
 
             // Remove marquee
@@ -167,22 +167,14 @@ namespace Taskbar_Temp_Monitor
 
             // Add menu items to the contextMenu item (taskbar menu)
             this.context.MenuItems.AddRange(
-                        new MenuItem[] { this.exitItem, this.showForm, this.aboutItem});
+                        new MenuItem[] { this.exitItem});
 
 
 
             // Set up menu items in taskbar
-            this.exitItem.Index = 2;
+            this.exitItem.Index = 0;
             this.exitItem.Text = "E&xit";
             this.exitItem.Click += new EventHandler(this.menu_Click);
-
-            this.aboutItem.Index = 1;
-            this.aboutItem.Text = "A&bout";
-            this.aboutItem.Click += new EventHandler(this.about_Click);
-
-            this.showForm.Index = 0;
-            this.showForm.Text = "O&pen";
-            this.showForm.Click += new EventHandler(this.showForm_Click);
 
 
 
@@ -374,9 +366,16 @@ namespace Taskbar_Temp_Monitor
             // Every call to this function gets the current CPU temperature and
             // updates the icon and tooltip text
             string cpuName = "";
+            decimal ctint;
             float? ct = getCpuTemp(ref cpuName);
-            decimal ctint = Math.Floor((decimal)ct);
-
+            try
+            {
+                ctint = Math.Floor((decimal)ct);
+            }
+            catch
+            {
+                ctint = 0; 
+            }
             // Too cold.. show frost
             if (ctint < 30)
             {
