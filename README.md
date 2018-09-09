@@ -5,7 +5,7 @@ Simple application utilizing the Open Hardware Monitor Library to extract CPU te
 display it as an icon in the taskbar. 
 
 On execution, the program runs in the background, updating the icon at a specified interval. 
-Release coming soon.
+Release 1.0 available as `setup.exe` in Release section.
 
 
 Screenshots
