@@ -1,4 +1,4 @@
-# taskbar-temps
+# tempmon
 
 Simple application utilizing the Open Hardware Monitor Library to extract CPU temperature sensor information and 
 display it as an icon in the taskbar. 
