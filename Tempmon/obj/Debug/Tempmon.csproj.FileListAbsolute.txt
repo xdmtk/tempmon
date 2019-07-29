@@ -1,0 +1,13 @@
+C:\Users\overc\source\repos\Tempmon\Tempmon\obj\Debug\Tempmon.csprojAssemblyReference.cache
+C:\Users\overc\source\repos\Tempmon\Tempmon\obj\Debug\Tempmon.MainForm.resources
+C:\Users\overc\source\repos\Tempmon\Tempmon\obj\Debug\Tempmon.Properties.Resources.resources
+C:\Users\overc\source\repos\Tempmon\Tempmon\obj\Debug\Tempmon.csproj.GenerateResource.cache
+C:\Users\overc\source\repos\Tempmon\Tempmon\obj\Debug\Tempmon.csproj.CoreCompileInputs.cache
+C:\Users\overc\source\repos\Tempmon\Tempmon\bin\Debug\Tempmon.exe.config
+C:\Users\overc\source\repos\Tempmon\Tempmon\bin\Debug\Tempmon.exe
+C:\Users\overc\source\repos\Tempmon\Tempmon\bin\Debug\Tempmon.pdb
+C:\Users\overc\source\repos\Tempmon\Tempmon\bin\Debug\HardwareProviders.CPU.dll
+C:\Users\overc\source\repos\Tempmon\Tempmon\bin\Debug\HardwareProviders.dll
+C:\Users\overc\source\repos\Tempmon\Tempmon\obj\Debug\Tempmon.csproj.CopyComplete
+C:\Users\overc\source\repos\Tempmon\Tempmon\obj\Debug\Tempmon.exe
+C:\Users\overc\source\repos\Tempmon\Tempmon\obj\Debug\Tempmon.pdb
