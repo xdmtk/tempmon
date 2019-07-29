@@ -1,6 +1,0 @@
-C:\Users\overc\source\repos\taskbar-temps-sa\TTMiNSTALLER\bin\Release\TTMiNSTALLER.msi
-C:\Users\overc\source\repos\taskbar-temps-sa\TTMiNSTALLER\bin\Release\TTMiNSTALLER.wixpdb
-obj\Release\Product.wixobj
-obj\Release\TTMiNSTALLER.wixproj.BindContentsFileListnull.txt
-obj\Release\TTMiNSTALLER.wixproj.BindOutputsFileListnull.txt
-obj\Release\TTMiNSTALLER.wixproj.BindBuiltOutputsFileListnull.txt
